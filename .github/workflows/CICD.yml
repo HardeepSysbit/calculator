@@ -22,11 +22,13 @@ jobs:
           go mod init calculator
           go build .
       - if: ${{success}}
-      - name:  Install Dependencies     
+      - name:  Install Dependencies 
+        run:
           go get github/com/tabeka/go2xunit
           go get github/com/franela/goblin
       - if: ${{success}}
       - name: Test
+        run:
           go test -v
           
             
