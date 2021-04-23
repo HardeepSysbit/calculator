@@ -17,7 +17,7 @@ jobs:
       - name: "Check Go Version"
         run: |
           go version
-      - name: Mod Init
+      - name: Mod Init Test
         run: |
            go build .
       - if: ${{success()}}
