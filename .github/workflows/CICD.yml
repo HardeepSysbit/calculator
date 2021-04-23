@@ -20,8 +20,8 @@ jobs:
       - name: Mod Init
         run: |
            go build .
-      - if: ${{success}}
-      - name:  Install 
+      - if: ${{success()}}
+      - name:  Test 
         run: |
           go test -v
          
