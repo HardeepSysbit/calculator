@@ -19,8 +19,7 @@ jobs:
           go version
       - name: Mod Init
         run: |
-          go mod init calculator
-          go build .
+           go build .
       - if: ${{success}}
       - name:  Install 
         run: |
