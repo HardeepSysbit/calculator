@@ -19,6 +19,8 @@ jobs:
           go version
       - name: Install Dependencies
         run:
+          go mod init .
+          go build .
           go get github/com/tabeka/go2xunit
           go get github/com/franela/goblin
           go test -v
