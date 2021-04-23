@@ -22,6 +22,6 @@ jobs:
            go build .
       - name: Execute App
         run: |
-           go run . 
+           go test . 
          
           
