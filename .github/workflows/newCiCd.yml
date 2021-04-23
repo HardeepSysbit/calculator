@@ -20,9 +20,6 @@ jobs:
       - name: Mod Init Test
         run: |
            go build .
-      - if: ${{success()}}
-      - name:  Test 
-        run: |
-          go test -v
+  
          
           
