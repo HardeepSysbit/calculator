@@ -17,9 +17,11 @@ jobs:
       - name: "Check Go Version"
         run: |
           go version
-      - name: Mod Init Test
+      - name: Build
         run: |
            go build .
-  
+      - name: Execute App
+        run: |
+           go run . 
          
           
