@@ -19,10 +19,14 @@ jobs:
           go version
       - name: Install Dependencies
         run:
-          go mod init .
+          go mod init calculator
           go build .
+      - if: ${{success}}
+      - name:  Install Dependencies     
           go get github/com/tabeka/go2xunit
           go get github/com/franela/goblin
+      - if: ${{success}}
+      - name: Test
           go test -v
           
             
