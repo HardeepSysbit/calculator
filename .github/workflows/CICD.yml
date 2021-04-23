@@ -17,5 +17,12 @@ jobs:
       - name: "Check Go Version"
         run: 
           go version
+      - name: Install Dependencies
+        run:
+          go get github/.com/tabeka/go2xunit
+          go get github/com/franela/goblin
+          go test -v
+          
+            
           
         
